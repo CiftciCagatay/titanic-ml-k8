@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: titanic-ml
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: titanic-ml
+      version: 0.0.1
+  template:
+    metadata:
+      labels:
+        app: titanic-ml
+        version: 0.0.1
+    spec:
+      containers:
+      - image: bluefx/titanic-ml:0.0.1
+        name: titanic-ml
+        imagePullPolicy: Always
+      restartPolicy: Always

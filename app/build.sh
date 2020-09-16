@@ -1,0 +1,1 @@
+docker build . -t bluefx/titanic-ml:0.0.2

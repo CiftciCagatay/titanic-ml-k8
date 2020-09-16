@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: titanic-ml
+spec:
+  selector:
+    app: titanic-ml
+    version: 0.0.1
+  ports:
+  - name: http-flask-api
+    protocol: TCP
+    port: 8080
+    targetPort: 8080
